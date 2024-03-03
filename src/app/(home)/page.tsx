@@ -107,7 +107,7 @@ function Studio() {
   const handleSendEmail = async (data: RdvType) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/api/sendmail`, {
+      const response = await fetch(`https://dydy-hair.vercel.app/api/sendmail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
