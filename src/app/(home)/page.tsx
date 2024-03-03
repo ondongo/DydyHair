@@ -125,7 +125,7 @@ function Studio() {
 
       if (response.ok) {
         console.log("E-mail envoyé avec succès !");
-        setIsEmailSent(true); // Mettre à jour l'état pour afficher le message de succès
+        setIsEmailSent(true);
       } else {
         console.error("Erreur lors de l'envoi de l'e-mail.");
       }
@@ -806,8 +806,10 @@ function Studio() {
                               className="italic-black"
                               {...register("service")}
                             >
-                              <option value="coupe">A domicile</option>
-                              <option value="mèches">Chez Dydy Hair</option>
+                              <option value="A domicile">A domicile</option>
+                              <option value="Chez Dydy Hair">
+                                Chez Dydy Hair
+                              </option>
                             </Select>
                           </FormControl>
 
@@ -834,8 +836,10 @@ function Studio() {
                               className="italic-black"
                               {...register("haircut")}
                             >
-                              <option value="coupe">Tresses naturelles</option>
-                              <option value="mèches">Mèches</option>
+                              <option value="Tresses naturelles">
+                                Tresses naturelles
+                              </option>
+                              <option value="Mèches">Mèches</option>
                             </Select>
                           </FormControl>
 
@@ -917,20 +921,23 @@ function Studio() {
                 ) : (
                   <>
                     <Box textAlign="center">
-                      <Icon as={FaCheckCircle} boxSize={12} color="green.500" />
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Icon
+                          as={FaCheckCircle}
+                          boxSize={12}
+                          color="green.500"
+                        />
+                      </motion.div>
+
                       <Flex my={6} textColor={"brand.darkgray"}>
                         Super ❤️ Votre rendez-vous a été pris en compte.
                         Veuillez vérifier votre e-mail.
                       </Flex>
                     </Box>
-
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Icon as={FaCheckCircle} boxSize={12} color="green.500" />
-                    </motion.div>
                   </>
                 )}
               </ModalBody>
