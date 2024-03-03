@@ -44,8 +44,8 @@ function Testimonial() {
             bg="#F6EEE2"
             fontFamily={"kally-dreams"}
             border={"1px solid tranparent"}
-            borderTopRadius={"50px"}
-            borderLeftRadius={"50px"}
+            borderTopRadius={"20px"}
+            borderLeftRadius={"20px"}
             flex={1}
             p={6}
            

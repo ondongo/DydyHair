@@ -1,8 +1,8 @@
 /* styles.css */
 @font-face {
-  font-family: 'kally-dreams';
-  src: url('/fonts/kally-dreams/Kally dreams.otf') format('opentype'),
-       url('/fonts/kally-dreams/Kally dreams.ttf') format('truetype');
+  font-family: "kally-dreams";
+  src: url("/fonts/kally-dreams/Kally dreams.otf") format("opentype"),
+    url("/fonts/kally-dreams/Kally dreams.ttf") format("truetype");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
@@ -25,42 +25,40 @@ body {
 
 .italic-orange {
   font-style: italic;
-  color: #CE9D06;
+  color: #ce9d06;
 }
 
 .container {
-
   display: flex;
   justify-content: center;
   height: 500px;
   gap: 10px;
-  
 }
 .container > div {
   flex: 0 0 120px;
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 10px #CE9D06;
+  box-shadow: 1px 5px 10px #ce9d06;
   position: relative;
   overflow: hidden;
- 
 }
 .container > div:nth-of-type(1) {
-  background: url("/image/coupe/coupe1.jpg") no-repeat 50%/cover;
+  background: url("/image/coupe/coupe1.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(2) {
-  background: url("/image/coupe/coupe2.jpg") no-repeat 50%/cover;
+  background: url("/image/coupe/coupe2.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(3) {
-  background: url("/image/coupe/coupe3.jpg") no-repeat 50%/cover;
+  background: url("/image/coupe/coupe3.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(4) {
-  background: url("/image/coupe/coupe4.jpg") no-repeat 50%/cover;
+  background: url("/image/coupe/coupe4.jpg") no-repeat 50% / cover;
 }
 
 .container > div:nth-of-type(5) {
-  background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+  background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    no-repeat 50% / cover;
 }
 .container > div .content {
   font-size: 1.5rem;
@@ -73,7 +71,11 @@ body {
   height: 100%;
   justify-content: flex-end;
   background: rgb(2, 2, 46);
-  background: linear-gradient(0deg, rgba(2, 2, 46, 0.6755077031) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 2, 46, 0.6755077031) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transform: translatey(100%);
   transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
   visibility: hidden;
@@ -85,11 +87,198 @@ body {
 }
 .container > div:hover {
   flex: 0 0 250px;
-  box-shadow: 1px 3px 15px #CE9D06;
+  box-shadow: 1px 3px 15px #ce9d06;
   transform: translatey(-30px);
 }
 .container > div:hover .content {
   opacity: 1;
   transform: translatey(0%);
   visibility: visible;
+}
+
+.underlined {
+  /*   background: red; */
+  position: relative;
+}
+
+.underline-mask:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(280 80% 50%);
+  /* Use a conic gradient mask to hide and show the bits you want */
+  --spread: 140deg;
+  --start: 290deg;
+  mask: conic-gradient(
+    from var(--start),
+    white 0 var(--spread),
+    transparent var(--spread)
+  );
+}
+
+.underline-overflow {
+  display: inline-block;
+  /* A little extra padding and overflow hidden   */
+  overflow: hidden;
+  padding-bottom: clamp(1rem, 2vmin, 2rem);
+}
+.underline-overflow:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 150%;
+  aspect-ratio: 2.5 / 1;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 50%;
+  border: 6px solid hsl(0, 0%, 100%);
+}
+
+.underline-clip:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(130 80% 50%);
+  /* Use a clip-path to hide and show the bits you want */
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+.remplissage {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.remplissage::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.remplissage:hover::before {
+  top: 0px;
+  border-radius: 0;
+  color: black;
+}
+
+.remplissage-menu {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.remplissage-menu::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 244, 245);
+  color: black;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.remplissage-menu:hover::before {
+  top: 0px;
+  border-radius: 0;
+  color: black;
+}
+
+.remplissage-menu-item {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  color: black;
+}
+.remplissage-menu-item ::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 244, 245);
+  color: black;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.remplissage-menu-item :hover::before {
+  top: 0px;
+  border-radius: 0;
+  color: black;
+}
+
+.shine {
+  background: linear-gradient(90deg, #ce9d06, #fff, #ce9d06);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navItem {
+  animation: fadeInDown 0.9s ease forwards;
+}
+
+.inputCss input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+  background-color: transparent;
+}
+
+.PhoneInputCountry {
+  padding: 5px;
+  margin-bottom: 0px;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -11,16 +11,12 @@ const stories = [
               margin: 0;
               padding: 0;
               overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             '>
-              <div style='
-                height: 675px;
-                width: 375px;
-                padding: 40px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background: url(https://i.picsum.photos/id/777/375/675.jpg?hmac=GtAgKtPxYwFSCUAw7Z49MDjTez2cf_uFu_PuWf9eNlo)
-              '></div>
+              <img src="image/tarif/tarif1.jpg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
             </body>
           </html>`,
   },
@@ -31,40 +27,49 @@ const stories = [
               margin: 0;
               padding: 0;
               overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             '>
-              <div style='
-                height: 675px;
-                width: 375px;
-                padding: 40px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background: url(https://www.knightsmark.co.uk/wp-content/uploads/2020/11/4-Panel-Traditional-Door-Design-From-Side-View-375x675.jpg)
-              '></div>
+              <img src="image/tarif/tarif2.png" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
             </body>
           </html>`,
   },
   {
     type: "iframe",
     html: `<html>
-          <body style='
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-          '>
-            <div style='
-              height: 675px;
-              width: 375px;
-              padding: 40px;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-              background: url(https://www.knightsmark.co.uk/wp-content/uploads/2020/07/Security-French-Doors-White-Colour-with-Glazing-Bars-375x675.jpg)
-            '></div>
-          </body>
-        </html>`,
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/coupe1.jpg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
+  },
+  {
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/coupe4.jpg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
   },
 ];
+
 
 const isValidStory = (index: any) =>
   index >= 0 && index < stories.length ? index : 0;
