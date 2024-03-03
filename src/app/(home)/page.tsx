@@ -24,6 +24,7 @@ import {
   useDisclosure,
   Input,
   Icon,
+  Spinner,
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -107,21 +108,24 @@ function Studio() {
   const handleSendEmail = async (data: RdvType) => {
     try {
       setLoading(true);
-      const response = await fetch(`https://dydy-hair.vercel.app/api/sendmail`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          name: data.name,
-          date: data.date,
-          phone: data.phoneInputWithCountrySelect,
-          time: data.time,
-          service: data.service,
-          haircut: data.haircut,
-        }),
-      });
+      const response = await fetch(
+        `https://dydy-hair.vercel.app/api/sendmail`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: data.email,
+            name: data.name,
+            date: data.date,
+            phone: data.phoneInputWithCountrySelect,
+            time: data.time,
+            service: data.service,
+            haircut: data.haircut,
+          }),
+        }
+      );
 
       if (response.ok) {
         console.log("E-mail envoyé avec succès !");
@@ -914,7 +918,13 @@ function Studio() {
                         fontFamily={"kally-dreams"}
                         className="remplissage-menu italic-black"
                       >
-                        {currentStep === totalSteps ? "Terminer" : "Suivant"}
+                        {loading ? (
+                          <Spinner color={"white"} />
+                        ) : currentStep === totalSteps ? (
+                          "Terminer"
+                        ) : (
+                          "Suivant"
+                        )}
                       </Button>
                     </Flex>
                   </form>
