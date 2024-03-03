@@ -28,7 +28,7 @@ export default function ReceveidTemplate({
       <Text style={h3}>Cher(e) {name},</Text>
       <Section style={{ textAlign: "center", paddingBlock: "22px" }}>
         <Text style={largeText}>
-          Merci d&apos;avoir pris rendez-vous avec DydyHair. Voici un
+          Merci d&apos;avoir pris rendez-vous avec Dydy&apos; Hair. Voici un
           récapitulatif de votre rendez-vous :
         </Text>
 
