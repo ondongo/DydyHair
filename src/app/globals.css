@@ -40,9 +40,29 @@ body {
   transition: 0.5s ease-in-out;
   cursor: pointer;
   box-shadow: 1px 5px 10px #ce9d06;
+  flex-wrap: wrap;
   position: relative;
   overflow: hidden;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .container > div {
+    flex-basis: calc(33.33% - 20px); /* 3 items per row with 10px gap */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container > div {
+    flex-basis: calc(50% - 20px); /* 2 items per row with 10px gap */
+  }
+}
+
 .container > div:nth-of-type(1) {
   background: url("/image/coupe/coupe1.jpg") no-repeat 50% / cover;
 }
@@ -85,15 +105,32 @@ body {
   margin-top: 5px;
   font-size: 1.2rem;
 }
+
 .container > div:hover {
   flex: 0 0 250px;
   box-shadow: 1px 3px 15px #ce9d06;
-  transform: translatey(-30px);
+  transform: translateY(-30px);
 }
+
 .container > div:hover .content {
   opacity: 1;
-  transform: translatey(0%);
+  transform: translateY(0%);
   visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .container > div:hover {
+    flex: 0 0 180px; /* Réduire la largeur sur les petits écrans */
+    transform: translateY(
+      -20px
+    ); /* Réduire la translation sur les petits écrans */
+  }
+
+  .container > div:hover .content {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+  }
 }
 
 .underlined {
@@ -268,7 +305,7 @@ body {
 .inputCss input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: black;
@@ -278,7 +315,7 @@ body {
 .PhoneInputCountry {
   padding: 5px;
   margin-bottom: 0px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

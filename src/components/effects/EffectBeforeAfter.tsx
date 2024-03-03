@@ -4,10 +4,11 @@ import ReactCompareImage from "react-compare-image";
 function EffectBeforeAfter() {
   return (
     <Flex
-      minW={"500px"}
-      maxW={"500px"}
-      minH={"500px"}
-      maxH={"500px"}
+      minW={["350px",null,null,"500px"]}
+      maxW={["350px",null,null,"500px"]}
+      minH={["350px",null,null,"500px"]}
+      maxH={["350px",null,null,"500px"]}
+      px={["20px",null,null,"0px"]}
       overflow={"hidden"}
       border={"1px solid white"}
       borderRadius={"8px"}
