@@ -4,7 +4,7 @@ import Stories, { WithSeeMore } from "react-insta-stories";
 
 function InstaMobile() {
   return (
-    <Flex width={"100%"}>
+    <Flex width={"100%"}  px={"30px"}>
       <Stories
         loop
         keyboardNavigation
@@ -111,7 +111,8 @@ const stories2 = [
   {
     url: "/video/video8.MP4",
     type: "video",
-    with:"100%"
+    with:"100%",
+    background: "salmon",
   },
 
   {
