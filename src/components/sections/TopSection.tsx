@@ -49,6 +49,7 @@ function TopSection({ TopSectionRef, onOpen }: any) {
                 right="15px"
                 top="8.96%"
                 transform="translate(-50%, -50%)"
+                display={["inline", null, "none"]}
               />
 
               <Image

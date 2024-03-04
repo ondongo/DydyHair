@@ -304,7 +304,7 @@ function Studio() {
         closeOnOverlayClick={false}
         isOpen={isOpen}
         onClose={onClose}
-        size={["full", null, "lg"]}
+        size={["full", null,null, "lg"]}
       >
         <ModalOverlay
           display="flex"
@@ -321,7 +321,7 @@ function Studio() {
               stiffness: 100,
               damping: 10,
             }}
-            display={{ base: "none", md: "inline" }}
+            display={["none", null, null, "inline"]}
           >
             <ModalContent className="italic-black">
               <ModalHeader textAlign={"center"}>
@@ -636,7 +636,7 @@ function Studio() {
 
           <ModalContent
             className="italic-black"
-            display={{ base: "inline", md: "none" }}
+            display={["inline", null, null, "none"]}
           >
             <ModalHeader textAlign={"center"}>
               Prise de rendez-vous

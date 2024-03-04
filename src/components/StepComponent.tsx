@@ -23,7 +23,7 @@ export default function StepComponent({ stepNumber }: StepComponentProps) {
   return (
     <Flex
       position="relative"
-      width={["375px", "414px", "650px", "470px"]}
+      width={["360px", "414px", "650px", "470px"]}
       direction={"column"}
     >
       <Stepper
@@ -55,7 +55,7 @@ export default function StepComponent({ stepNumber }: StepComponentProps) {
                     top="36%"
                     left={1}
                     transform="translateY(-50%)"
-                    width={["64px", null, "94px", "180px"]}
+                    width={["150px", null, "280px", "180px"]}
                     height={1}
                     bg={activeStep > index ? "#F6EEE2" : "gray.300"}
                   />
