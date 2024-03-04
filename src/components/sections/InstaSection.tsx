@@ -1,6 +1,6 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 const InstaComponent = dynamic(
   () => import("../../components/instagram/InstaStories"),
@@ -8,7 +8,35 @@ const InstaComponent = dynamic(
     ssr: false,
   }
 );
-function InstaSection() {
+
+const InstaMobile = dynamic(
+  () => import("../../components/instagram/InstaMobile"),
+  {
+    ssr: false,
+  }
+);
+
+function InstaSection({ StorySectionRef }: any) {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  /*******************************/
+  /* Resize Event        */
+  /******************************/
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
   return (
     <Flex
       minH={"625px"}
@@ -16,23 +44,22 @@ function InstaSection() {
       justifyContent={"center"}
       alignItems={"center"}
       my={"30px"}
-      px={["10px",null,"0px"]}
-      pr={["0px",null,"10px"]}
+      px={["10px", null, "0px"]}
+      pr={["0px", null, "10px"]}
       data-aos="fade-down"
       direction={["column-reverse", null, null, "row"]}
-      
+      ref={StorySectionRef}
     >
-      <InstaComponent />
+      {windowWidth <= 1279 ? <InstaMobile /> : <InstaComponent />}
 
       <Flex
-        direction={["row",null,"column"]}
+        direction={["row", null, "column"]}
         maxW={"490px"}
         gap={"10px"}
         alignItems={"center"}
         textAlign="center"
         fontSize={["35px", null, "45px", "65px"]}
         my={"30px"}
-
       >
         <Heading
           fontFamily={"kally-dreams"}

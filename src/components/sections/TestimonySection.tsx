@@ -2,7 +2,7 @@ import { Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import Testimonial from "../testimonials/Testimonial";
 
-function TestimonySection() {
+function TestimonySection({ TestimonySectionRef}:any) {
   return (
     <Flex
       direction={"column"}
@@ -11,6 +11,7 @@ function TestimonySection() {
       textAlign="center"
       gap={"10px"}
       data-aos="fade-down"
+      ref={TestimonySectionRef}
     >
       <Heading
         fontFamily={"kally-dreams"}

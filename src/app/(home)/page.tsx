@@ -72,6 +72,7 @@ function Studio() {
     });
     AOS.refresh();
   }, []);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const TopSectionRef = useRef<HTMLDivElement>(null);
   const handleGoToTop = () => {
@@ -81,7 +82,32 @@ function Studio() {
     }
   };
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const StorySectionRef = useRef<HTMLDivElement>(null);
+  const handleGoToStory = () => {
+    const ref = StorySectionRef;
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+    onClose();
+  };
+
+  const TestimonySectionRef = useRef<HTMLDivElement>(null);
+  const handleGoToTestimony = () => {
+    const ref = TestimonySectionRef;
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+    onClose();
+  };
+
+  const TarifSectionRef = useRef<HTMLDivElement>(null);
+  const handleGoToTarif = () => {
+    const ref = TarifSectionRef;
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+    onClose();
+  };
 
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 3;
@@ -170,15 +196,27 @@ function Studio() {
         overflow={"hidden"}
         w={"full"}
       >
-        {windowWidth <= 1279 ? <NavBarDashboardMobile /> : <NavBarDesktop />}
+        {windowWidth <= 1279 ? (
+          <NavBarDashboardMobile
+            handleGoToTestimony={handleGoToTestimony}
+            handleGoToStory={handleGoToStory}
+            handleGoToTarif={handleGoToTarif}
+          />
+        ) : (
+          <NavBarDesktop
+            handleGoToTestimony={handleGoToTestimony}
+            handleGoToStory={handleGoToStory}
+            handleGoToTarif={handleGoToTarif}
+          />
+        )}
 
         <TopSection TopSectionRef={TopSectionRef} onOpen={onOpen} />
         <BeforeAfterSection />
         <HairCutClientSection />
 
-        <TarifSection />
-        <InstaSection />
-        <TestimonySection />
+        <TarifSection TarifSectionRef={TarifSectionRef} />
+        <InstaSection StorySectionRef={StorySectionRef} />
+        <TestimonySection TestimonySectionRef={TestimonySectionRef} />
 
         <AspectRatio ratio={16 / 9} minH={"625px"} maxH={"625px"}>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.9636292536525!2d-17.448034800000002!3d14.714648399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1732eb7270e17%3A0x190ffe3c6199aeaf!2sMarch%C3%A9%20Mbabass!5e0!3m2!1sfr!2ssn!4v1704062659516!5m2!1sfr!2ssn" />

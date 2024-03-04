@@ -32,8 +32,11 @@ import {
 } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 
-
-function NavBarDesktop() {
+function NavBarDesktop({
+  handleGoToTestimony,
+  handleGoToStory,
+  handleGoToTarif,
+}: any) {
   const phoneNumber = "+221784603783"; // Remplacez par le numéro de téléphone
   const message = encodeURIComponent(
     "Bonjour, je souhaite prendre rendez-vous sur DydyHair."
@@ -45,8 +48,6 @@ function NavBarDesktop() {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     history.push(whatsappUrl);
   };
-
-  
 
   return (
     <>
@@ -85,6 +86,7 @@ function NavBarDesktop() {
                 className="remplissage-menu-item  italic-black navItem"
                 style={{ animationDelay: "0.4s" }}
                 _hover={{ color: "#CE9D06" }}
+                onClick={handleGoToTarif}
               >
                 <Text>Services</Text>
               </Flex>
@@ -102,6 +104,7 @@ function NavBarDesktop() {
                 minW={"117px"}
                 fontWeight={600}
                 as={"button"}
+                onClick={handleGoToStory}
               >
                 <Text>Stories</Text>
               </Flex>
@@ -119,6 +122,7 @@ function NavBarDesktop() {
                 minW={"117px"}
                 fontWeight={600}
                 as={"button"}
+                onClick={handleGoToTestimony}
               >
                 <Text>Témoignages</Text>
               </Flex>
@@ -160,8 +164,6 @@ function NavBarDesktop() {
           </Flex>
         </Flex>
       </Flex>
-
-    
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { Flex, Heading, Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-function TarifSection() {
+function TarifSection({ TarifSectionRef }: any) {
   return (
     <Flex
       direction={"column"}
@@ -10,7 +10,7 @@ function TarifSection() {
       gap={["30px", "40px"]}
       px="10rem"
       my={"40px"}
-      
+      ref={TarifSectionRef}
     >
       <Heading
         fontFamily={"kally-dreams"}

@@ -30,6 +30,7 @@ import {
   IoSearchOutline,
   IoTimeOutline,
 } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -53,15 +54,29 @@ const MenuIcon = () => (
   </svg>
 );
 
-const NavBarDashboardMobile = ({ userDetails, handleLogout }: any) => {
+const NavBarDashboardMobile = ({
+  handleGoToTestimony,
+  handleGoToStory,
+  handleGoToTarif,
+}: any) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [authLoading, setAuthLoading] = useState(true);
 
   const router = useRouter();
 
   const isDisabled = true;
   const pathname = usePathname();
+
+  const phoneNumber = "+221784603783"; // Remplacez par le numéro de téléphone
+  const message = encodeURIComponent(
+    "Bonjour, je souhaite prendre rendez-vous sur DydyHair."
+  );
+
+  const history = useRouter();
+  const handleWhatsApp = () => {
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    history.push(whatsappUrl);
+  };
+
   return (
     <>
       <Flex
@@ -124,64 +139,32 @@ const NavBarDashboardMobile = ({ userDetails, handleLogout }: any) => {
                 <Box
                   _hover={{
                     textDecor: "none",
-                    background: "#102130",
+                    background: "rgba(243, 244, 245)",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
+                    color: "#CE9D06",
                   }}
-                  display={"flex"}
-                  onClick={() => router.push("/dashboard")}
+                  display={["flex"]}
                   as="button"
+                  onClick={handleGoToTarif}
                   alignItems={"center"}
                   gap={2}
                   style={{
-                    background: pathname == "/dashboard" ? "#102130" : "",
+                    background: pathname == "eldy" ? "rgba(243, 244, 245)" : "",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
                   }}
                 >
-                  <IoHomeOutline size={24} />
-
                   <Text
-                    className="active"
+                    _hover={{
+                      color: "#CE9D06",
+                    }}
+                    className="active italic-black"
                     transition="opacity 0.4s ease-in-out, display 0.4s ease-in-out" // Add transition effect
                   >
-                    Home
-                  </Text>
-                </Box>
-              </Flex>
-
-            
-           
-
-              <Flex className="sidebar-items" my={2}>
-                <Box
-                  _hover={{
-                    textDecor: "none",
-                    background: "#102130",
-                    padding: "12px",
-                    borderRadius: "10px",
-                    width: "100%",
-                  }}
-                  display={["flex"]}
-                  as="button"
-                  onClick={() => router.push("/fastSearch")}
-                  alignItems={"center"}
-                  gap={2}
-                  style={{
-                    background: pathname == "/fastSearch" ? "#102130" : "",
-                    padding: "12px",
-                    borderRadius: "10px",
-                    width: "100%",
-                  }}
-                >
-                  <IoPlayForwardOutline size={24} />
-                  <Text
-                    className="active"
-                    transition="opacity 0.4s ease-in-out" // Add transition effect
-                  >
-                    Rapide
+                    Services 💇🏽‍♀️
                   </Text>
                 </Box>
               </Flex>
@@ -190,29 +173,33 @@ const NavBarDashboardMobile = ({ userDetails, handleLogout }: any) => {
                 <Box
                   _hover={{
                     textDecor: "none",
-                    background: "#102130",
+                    background: "rgba(243, 244, 245)",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
+                    color: "#CE9D06",
                   }}
                   display={["flex"]}
                   as="button"
-                  onClick={() => router.push("/search-map")}
                   alignItems={"center"}
                   gap={2}
                   style={{
-                    background: pathname == "/search-map" ? "#102130" : "",
+                    background:
+                      pathname == "/eldy" ? "rgba(243, 244, 245)" : "",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
                   }}
+                  onClick={handleGoToStory}
                 >
-                  <IoMapOutline size={24} />
                   <Text
-                    className="active"
-                    transition="opacity 0.4s ease-in-out"
+                    _hover={{
+                      color: "#CE9D06",
+                    }}
+                    className="active italic-black"
+                    transition="opacity 0.4s ease-in-out, display 0.4s ease-in-out" // Add transition effect
                   >
-                    Recherche pays
+                    Stories 😍
                   </Text>
                 </Box>
               </Flex>
@@ -220,68 +207,73 @@ const NavBarDashboardMobile = ({ userDetails, handleLogout }: any) => {
                 <Box
                   _hover={{
                     textDecor: "none",
-                    background: "#102130",
+                    background: "rgba(243, 244, 245)",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
+                    color: "#CE9D06",
                   }}
                   display={["flex"]}
                   as="button"
-                  onClick={() => router.push("/wishlist")}
+                  onClick={handleGoToTestimony}
                   alignItems={"center"}
                   gap={2}
                   style={{
-                    background: pathname == "/wishlist" ? "#102130" : "",
+                    background:
+                      pathname == "/eldy" ? "rgba(243, 244, 245)" : "",
                     padding: "12px",
                     borderRadius: "10px",
                     width: "100%",
                   }}
                 >
-                  <IoHeartOutline size={24} />
-
                   <Text
-                    className="active"
-                    transition="opacity 0.4s ease-in-out"
+                    _hover={{
+                      color: "#CE9D06",
+                    }}
+                    className="active italic-black"
+                    transition="opacity 0.4s ease-in-out, display 0.4s ease-in-out" // Add transition effect
                   >
-                    Favoris
+                    Témoignages 🙏🏽
                   </Text>
                 </Box>
               </Flex>
 
               <Divider />
               <Flex className="sidebar-items" my={2}>
-                <Box
-                  display={["flex"]}
-                  as="button"
-                  onClick={() => router.push("/profile")}
-                  alignItems={"center"}
-                  gap={2}
+                <Flex
+                  flex={1}
+                  justifyContent={"center"}
+                  background={"transparent"}
+                  lineHeight={"normal"}
+                  h="auto"
+                  borderRadius={"none"}
+                  borderLeft="3px solid "
+                  borderColor={"white"}
+                  padding="18px"
+                  mb={"2px"}
+                  bg={"#CE9D06"}
                   _hover={{
-                    textDecor: "none",
-                    background: "#102130",
-                    padding: "12px",
-                    borderRadius: "10px",
-                    width: "100%",
-                  }}
-                  style={{
-                    background: pathname == "/profile" ? "#102130" : "",
+                    borderColor: "#CE9D06",
 
-                    padding: "12px",
-                    borderRadius: "10px",
-                    width: "100%",
+                    color: "#CE9D06",
                   }}
+                  fontSize="20px"
+                  fontStyle="normal"
+                  fontFamily={"kally-dreams"}
+                  className="remplissage-menu italic-black navItem"
+                  style={{ animationDelay: "0.4s" }}
+                  height={"100%"}
+                  align={"center"}
+                  minW={"117px"}
+                  fontWeight={600}
+                  as={"button"}
+                  gap={"10px"}
+                  onClick={handleWhatsApp}
                 >
-                  <IoPersonOutline size={24} />
-
-                  <Text
-                    className="active"
-                    transition="opacity 0.4s ease-in-out" // Add transition effect
-                  >
-                    Profil
-                  </Text>
-                </Box>
+                  <Text>Contact </Text>
+                  <FaWhatsapp />
+                </Flex>
               </Flex>
-
             </Box>
           </DrawerBody>
         </DrawerContent>
