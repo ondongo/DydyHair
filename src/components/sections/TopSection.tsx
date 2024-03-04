@@ -26,7 +26,7 @@ function TopSection({ TopSectionRef, onOpen }: any) {
     <>
       {windowWidth <= 1279 ? (
         <>
-          <Flex direction={"column"} >
+          <Flex direction={"column"}  width="full" overflow={"hidden"} >
             <Flex ref={TopSectionRef} width="full" overflow={"hidden"}>
               <Flex
                 flex={1}
@@ -56,9 +56,9 @@ function TopSection({ TopSectionRef, onOpen }: any) {
                 alt="Description de l'image"
                 position="absolute"
                 maxH={"350px"}
-                maxW={"400px"}
+               
                 minH={"350px"}
-                minW={"400px"}
+                minW={"360px"}
                 left="50%" // Position horizontale décalée
                 top="22.5rem" // Position verticale décalée
                 transform="translate(-50%, -50%)"
