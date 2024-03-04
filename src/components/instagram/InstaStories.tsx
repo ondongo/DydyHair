@@ -68,6 +68,42 @@ const stories = [
             </body>
           </html>`,
   },
+
+  {
+    url: "/video/video9.MP4",
+    type: "video",
+    with:"100%"
+  },
+  {
+    url: "/video/video2.mov",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video3.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video4.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video5.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video6.MP4",
+    type: "video",
+    with:"100%"
+  },
+  
 ];
 
 
@@ -200,7 +236,7 @@ function InstaStories() {
           }}
           storyStyles={{
             borderRadius: "16px",
-            zIndex: 20,
+            zIndex: 999,
           }}
           onStoryStart={(index: any) => {
             handleStoryChange(index);

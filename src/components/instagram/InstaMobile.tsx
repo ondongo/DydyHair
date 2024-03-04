@@ -39,7 +39,8 @@ const Story2 = ({ action, isPaused }) => {
         </p> */}
       {/* <h1>{isPaused ? "Paused" : "Playing"}</h1> */}
       <h4>
-     prennez rendez-vous chez dydy hair 😄<br /> 
+        prennez rendez-vous chez dydy hair 😄
+        <br />
       </h4>
       {/* <p>React Native version coming soon.</p> */}
     </div>
@@ -48,9 +49,40 @@ const Story2 = ({ action, isPaused }) => {
 
 const stories2 = [
   {
+    url: "/video/video9.MP4",
+    type: "video",
+    with:"100%"
+  },
+  {
     url: "/video/video2.mov",
     type: "video",
+    with:"100%"
   },
+
+  {
+    url: "/video/video3.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video4.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video5.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video6.MP4",
+    type: "video",
+    with:"100%"
+  },
+  
   {
     content: ({ action, isPaused }) => {
       return (
@@ -71,6 +103,18 @@ const stories2 = [
   },
 
   {
+    url: "/video/video7.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
+    url: "/video/video8.MP4",
+    type: "video",
+    with:"100%"
+  },
+
+  {
     content: ({ action, isPaused }) => {
       return (
         <div style={contentStyle}>
@@ -84,6 +128,16 @@ const stories2 = [
         </div>
       );
     },
+  },
+
+  {
+    url: "/video/video9.MP4",
+    type: "video",
+  },
+
+  {
+    url: "/video/video10.MP4",
+    type: "video",
   },
 
   {

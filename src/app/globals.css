@@ -67,7 +67,7 @@ body {
   background: url("/image/coupe/coupe1.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(2) {
-  background: url("/image/coupe/coupe2.jpg") no-repeat 50% / cover;
+  background: url("/image/coupe/coupe5.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(3) {
   background: url("/image/coupe/coupe3.jpg") no-repeat 50% / cover;
@@ -76,10 +76,8 @@ body {
   background: url("/image/coupe/coupe4.jpg") no-repeat 50% / cover;
 }
 
-.container > div:nth-of-type(5) {
-  background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-    no-repeat 50% / cover;
-}
+
+
 .container > div .content {
   font-size: 1.5rem;
   color: #fff;
