@@ -39,6 +39,7 @@ function InstaSection({ StorySectionRef }: any) {
   }, []);
   return (
     <Flex
+      mt={"20px"}
       minH={"625px"}
       bg={"#F6EEE2"}
       justifyContent={"center"}
