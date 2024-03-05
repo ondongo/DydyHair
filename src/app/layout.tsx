@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +32,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Link
+            href="https://wa.me/+221784603783?text=Bonjour,je souhaite prendre rendez-vous sur DydyHair."
+            
+          >
+            <FaWhatsapp className="circle-ripple" fontSize={"40px"}/>
+          </Link>
+        </Providers>
+
         <Analytics />
       </body>
       <script

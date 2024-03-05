@@ -317,3 +317,31 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+
+.circle-ripple {
+	position: fixed;
+    bottom: 150px; 
+    right: 50px; 
+    z-index: 1000; 
+	background-color: #35ffc3;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	animation: ripple 0.7s linear infinite;
+	color: white;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  @keyframes ripple {
+	0% {
+	  box-shadow: 0 0 0 0 rgba(2, 207, 170, 0.3), 0 0 0 12px rgba(2, 207, 170, 0.3), 0 0 0 20px rgba(2, 207, 170, 0.3), 0 0 0 28px rgba(2, 207, 170, 0.3);
+	}
+	100% {
+	  box-shadow: 0 0 0 12px rgba(2, 207, 170, 0.3), 0 0 0 20px rgba(2, 207, 170, 0.3), 0 0 0 28px rgba(2, 207, 170, 0.3), 0 0 0 40px rgba(2, 207, 170, 0);
+	}
+  }
