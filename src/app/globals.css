@@ -323,7 +323,7 @@ body {
 .circle-ripple {
 	position: fixed;
     bottom: 150px; 
-    right: 50px; 
+    right: 30px; 
     z-index: 1000; 
 	background-color: #35ffc3;
 	width: 1em;
