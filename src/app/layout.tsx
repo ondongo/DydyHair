@@ -36,9 +36,10 @@ export default function RootLayout({
           {children}
           <Link
             href="https://wa.me/+221784603783?text=Bonjour,je souhaite prendre rendez-vous sur DydyHair."
-            
+            className="circle-ripple"
+            fontSize={"40px"} 
           >
-            <FaWhatsapp className="circle-ripple" fontSize={"40px"}/>
+            <FaWhatsapp />
           </Link>
         </Providers>
 
