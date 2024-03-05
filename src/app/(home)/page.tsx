@@ -304,7 +304,7 @@ function Studio() {
         closeOnOverlayClick={false}
         isOpen={isOpen}
         onClose={onClose}
-        size={["full", null,null, "lg"]}
+        size={["full", null, null, "lg"]}
       >
         <ModalOverlay
           display="flex"
@@ -322,6 +322,7 @@ function Studio() {
               damping: 10,
             }}
             display={["none", null, null, "inline"]}
+            zIndex="9999"
           >
             <ModalContent className="italic-black">
               <ModalHeader textAlign={"center"}>
