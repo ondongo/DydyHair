@@ -63,6 +63,7 @@ import HairCutClientSection from "../../components/sections/HairCutClientSection
 import TarifSection from "../../components/sections/TarifSection";
 import InstaSection from "../../components/sections/InstaSection";
 import TestimonySection from "../../components/sections/TestimonySection";
+import { useRouter } from "next/navigation";
 function Studio() {
   useEffect(() => {
     AOS.init({
@@ -164,6 +165,7 @@ function Studio() {
     }
   };
 
+  const router = useRouter()
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
@@ -247,15 +249,10 @@ function Studio() {
                 icon={<FaInstagram />}
                 rounded={"full"}
                 aria-label=""
+                onClick={() => router.push("https://www.instagram.com/dydy_shop_beauty/")}
+
               />
 
-              <IconButton
-                _hover={{ transform: "scale(1.1)" }}
-                colorScheme="facebook"
-                icon={<FaFacebook />}
-                rounded={"full"}
-                aria-label=""
-              />
             </HStack>
           </Flex>
 
