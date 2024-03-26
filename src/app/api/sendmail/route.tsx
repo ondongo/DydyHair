@@ -72,7 +72,7 @@ export const POST = async (request: NextRequest) => {
       const [firstEmailResponse, secondEmailResponse] = await Promise.all([
         transporter.sendMail({
           ...baseMailOptions,
-          to: "gloireondongo1205@gmail.com",
+          to: "dydyhair2024@gmail.com",
           subject: "Prise de rendez-vous sur dydy's hair",
           text: plainTextMail,
           html: reactToHtml,
