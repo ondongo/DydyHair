@@ -1,6 +1,16 @@
 import { Flex, Heading, Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
+const tressesData = [
+  { type: "tresses naturels", price: 4000 },
+  { type: "Knolless", price: [6000, 5000] },
+  { type: "Braids", price: [6000, 5000] },
+  { type: "Micro-Twists avec mèches", price: 6000 },
+  { type: "Micro-Twists sans mèches", price: 5000 },
+  { type: "Twists Passions", price: 6000 },
+  { type: "Cordons", price: 5000 },
+  { type: "D'autres tresses avec mèches", price: 6000 },
+];
 function TarifSection({ TarifSectionRef }: any) {
   return (
     <Flex
@@ -50,150 +60,36 @@ function TarifSection({ TarifSectionRef }: any) {
               ml={"30px"}
               gap={"30px"}
               data-aos="fade-down"
+              mb={"20px"}
             >
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Tresses naturels
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
-
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Knotless
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
-
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Nattes collées
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
-
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Nattes avec mèches
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
-
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Twists avec mèches
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
-
-              <Flex gap={"10px"}>
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  Twists sans mèches
-                </Heading>
-                <Text display={{ base: "none", md: "inline" }}>
-                  ........................
-                </Text>
-                <Text display={{ base: "inline", md: "none" }}>.........</Text>
-
-                <Heading
-                  fontFamily={"kally-dreams"}
-                  fontSize={["20px", null, "25px"]}
-                  lineHeight={"normal"}
-                  whiteSpace={"nowrap"}
-                >
-                  5000 CFA
-                </Heading>
-              </Flex>
+              {tressesData.map((tresse, index) => (
+                <Flex key={index} gap={"10px"}>
+                  <Heading
+                    fontFamily={"kally-dreams"}
+                    fontSize={["20px", null, "25px"]}
+                    lineHeight={"normal"}
+                    whiteSpace={"nowrap"}
+                  >
+                    {tresse.type}
+                  </Heading>
+                  <Text display={{ base: "none", md: "inline" }}>
+                    ........................
+                  </Text>
+                  <Text display={{ base: "inline", md: "none" }}>
+                    .........
+                  </Text>
+                  <Heading
+                    fontFamily={"kally-dreams"}
+                    fontSize={["20px", null, "25px"]}
+                    lineHeight={"normal"}
+                    whiteSpace={"nowrap"}
+                  >
+                    {Array.isArray(tresse.price)
+                      ? `${tresse.price[0]} et ${tresse.price[1]} CFA`
+                      : `${tresse.price} CFA`}
+                  </Heading>
+                </Flex>
+              ))}
             </Flex>
           </Flex>
 

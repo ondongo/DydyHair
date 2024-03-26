@@ -51,8 +51,9 @@ function InstaSection({ StorySectionRef }: any) {
       direction={["column-reverse", null, null, "row"]}
       ref={StorySectionRef}
     >
-      {windowWidth <= 1279 ? <InstaMobile /> : <InstaComponent />}
-
+      {typeof window !== "undefined" && (
+        <>{windowWidth <= 1279 ? <InstaMobile /> : <InstaComponent />}</>
+      )}
       <Flex
         direction={["row", null, "column"]}
         maxW={"490px"}

@@ -165,7 +165,7 @@ function Studio() {
     }
   };
 
-  const router = useRouter()
+  const router = useRouter();
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
@@ -195,18 +195,22 @@ function Studio() {
         overflow={"hidden"}
         w={"full"}
       >
-        {windowWidth <= 1279 ? (
-          <NavBarDashboardMobile
-            handleGoToTestimony={handleGoToTestimony}
-            handleGoToStory={handleGoToStory}
-            handleGoToTarif={handleGoToTarif}
-          />
-        ) : (
-          <NavBarDesktop
-            handleGoToTestimony={handleGoToTestimony}
-            handleGoToStory={handleGoToStory}
-            handleGoToTarif={handleGoToTarif}
-          />
+        {typeof window !== "undefined" && (
+          <>
+            {windowWidth <= 1279 ? (
+              <NavBarDashboardMobile
+                handleGoToTestimony={handleGoToTestimony}
+                handleGoToStory={handleGoToStory}
+                handleGoToTarif={handleGoToTarif}
+              />
+            ) : (
+              <NavBarDesktop
+                handleGoToTestimony={handleGoToTestimony}
+                handleGoToStory={handleGoToStory}
+                handleGoToTarif={handleGoToTarif}
+              />
+            )}
+          </>
         )}
 
         <TopSection TopSectionRef={TopSectionRef} onOpen={onOpen} />
@@ -249,10 +253,10 @@ function Studio() {
                 icon={<FaInstagram />}
                 rounded={"full"}
                 aria-label=""
-                onClick={() => router.push("https://www.instagram.com/dydy_shop_beauty/")}
-
+                onClick={() =>
+                  router.push("https://www.instagram.com/dydy_shop_beauty/")
+                }
               />
-
             </HStack>
           </Flex>
 
