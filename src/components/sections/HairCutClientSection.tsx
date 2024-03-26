@@ -28,7 +28,7 @@ function HairCutClientSection() {
           lineHeight={"normal"}
           data-aos="fade-down"
         >
-          <span style={{ color: "#CE9D06" }}>Coiffures</span> de nos clientes ❤️
+          <span style={{ color: "#CE9D06" }}>Coiffures</span> des clientes ❤️
         </Heading>
 
         <Text
