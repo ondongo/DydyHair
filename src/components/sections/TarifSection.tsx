@@ -66,7 +66,7 @@ function TarifSection({ TarifSectionRef }: any) {
                 <Flex key={index} gap={"10px"}>
                   <Heading
                     fontFamily={"kally-dreams"}
-                    fontSize={["20px", null, "25px"]}
+                    fontSize={["18px", null, "25px"]}
                     lineHeight={"normal"}
                     whiteSpace={"nowrap"}
                   >
@@ -80,7 +80,7 @@ function TarifSection({ TarifSectionRef }: any) {
                   </Text>
                   <Heading
                     fontFamily={"kally-dreams"}
-                    fontSize={["20px", null, "25px"]}
+                    fontSize={["16px", null, "25px"]}
                     lineHeight={"normal"}
                     whiteSpace={"nowrap"}
                   >

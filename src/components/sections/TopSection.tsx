@@ -209,6 +209,7 @@ function TopSection({ TopSectionRef, onOpen }: any) {
                   right="15px"
                   top="9.96%"
                   transform="translate(-50%, -50%)"
+                  display={"none"}
                 />
 
                 <Image
