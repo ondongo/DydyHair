@@ -247,12 +247,13 @@ function Studio() {
 
           <Flex width="100%" justifyContent={"center"} mt={2}>
             <HStack>
-              <IconButton
-                _hover={{ transform: "scale(1.1)" }}
-                colorScheme="pink"
-                icon={<FaInstagram />}
+              <Image
+                src="/image/Instagram_icon.png"
                 rounded={"full"}
-                aria-label=""
+                alt="Instagram"
+                boxSize="30px"
+                cursor="pointer"
+                _hover={{ transform: "scale(1.1)" }}
                 onClick={() =>
                   router.push("https://www.instagram.com/dydy_shop_beauty/")
                 }

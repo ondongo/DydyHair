@@ -64,16 +64,16 @@ body {
 }
 
 .container > div:nth-of-type(1) {
-  background: url("/image/coupe/coupe1.jpg") no-repeat 50% / cover;
+  background: url("/image/coupe/NewCoupe3.jpeg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(2) {
   background: url("/image/coupe/coupe6.jpg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(3) {
-  background: url("/image/coupe/coupe3.jpg") no-repeat 50% / cover;
+  background: url("/image/coupe/NewCoupe5.jpeg") no-repeat 50% / cover;
 }
 .container > div:nth-of-type(4) {
-  background: url("/image/coupe/coupe4.jpg") no-repeat 50% / cover;
+  background: url("/image/coupe/NewCoupe1.jpeg") no-repeat 50% / cover;
 }
 
 
@@ -323,7 +323,7 @@ body {
 .circle-ripple {
 	position: fixed;
     bottom: 150px; 
-    right: 30px; 
+    right: 35px; 
     z-index: 1000; 
 	background-color: #35ffc3;
 	width: 1em;

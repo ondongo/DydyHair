@@ -65,10 +65,21 @@ const stories2 = [
     with:"100%"
   },
 
+ 
   {
-    url: "/video/video4.MP4",
-    type: "video",
-    with:"100%"
+    content: ({ action, isPaused }) => {
+      return (
+        <div >
+          <Image
+            style={image}
+            src="/image/coupe/NewCoupe3.jpeg"
+            alt=""
+            objectFit={"cover"}
+          />
+      
+        </div>
+      );
+    },
   },
 
   {
@@ -83,20 +94,18 @@ const stories2 = [
     with:"100%"
   },
   
+
   {
     content: ({ action, isPaused }) => {
       return (
-        <div style={contentStyle}>
-          <h1>Hey All 👋</h1>
-          <h1>Check &apos;s journey story.</h1>
-
+        <div >
           <Image
             style={image}
-            src="/image/coupe/coupe4.jpg"
+            src="/image/coupe/NewCoupe5.jpeg"
             alt=""
             objectFit={"cover"}
           />
-          <h4>stories by Eldy ❤️</h4>
+      
         </div>
       );
     },
@@ -118,43 +127,65 @@ const stories2 = [
   {
     content: ({ action, isPaused }) => {
       return (
-        <div style={contentStyle}>
+        <div >
           <Image
             style={image}
-            src="/image/coupe/coupe1.jpg"
+            src="/image/coupe/NewCoupe1.jpeg"
             alt=""
             objectFit={"cover"}
           />
-          <h4>stories by Eldy ❤️</h4>
+      
         </div>
       );
     },
   },
 
-  {
-    url: "/video/video9.MP4",
-    type: "video",
-  },
-
-  {
-    url: "/video/video10.MP4",
-    type: "video",
-  },
 
   {
     content: ({ action, isPaused }) => {
       return (
-        <div style={contentStyle}>
-          <h1>Hey All 👋</h1>
-          <h1>Check &apos;s journey story.</h1>
-
+        <div >
           <Image
             style={image}
-            src="image/coupe/coupe3.jpg"
+            src="/image/coupe/NewCoupe9.jpeg"
             alt=""
             objectFit={"cover"}
           />
-          <h4>stories by Eldy ❤️</h4>
+      
+        </div>
+      );
+    },
+  },
+
+ 
+  {
+    content: ({ action, isPaused }) => {
+      return (
+        <div >
+          <Image
+            style={image}
+            src="/image/coupe/NewCoupe7.jpeg"
+            alt=""
+            objectFit={"cover"}
+          />
+      
+        </div>
+      );
+    },
+  },
+
+
+  {
+    content: ({ action, isPaused }) => {
+      return (
+        <div >
+          <Image
+            style={image}
+            src="/image/coupe/NewCoupe8.jpeg"
+            alt=""
+            objectFit={"cover"}
+          />
+      
         </div>
       );
     },
@@ -191,8 +222,11 @@ const stories2 = [
   //   )
   // },
 
+ 
   {
-    content: Story2,
+    url: "/video/video13.MP4",
+    type: "video",
+    with:"100%"
   },
 ];
 

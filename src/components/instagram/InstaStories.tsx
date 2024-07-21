@@ -15,7 +15,75 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/tarif/tarif1.jpg" style="  height: 675px;
+              <img src="image/coupe/Newcoupe1.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
+  },
+
+  {
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/Newcoupe9.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
+  },
+
+  {
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/Newcoupe2.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
+  },
+
+  {
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/Newcoupe8.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
+  },
+
+  {
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/coupe5.jpg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -31,11 +99,12 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/tarif/tarif2.png" style="  height: 675px;
+              <img src="image/coupe/Newcoupe3.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
   },
+
   {
     type: "iframe",
     html: `<html>
@@ -47,11 +116,12 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/coupe1.jpg" style="  height: 675px;
+              <img src="image/coupe/coupe6.jpg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
   },
+
   {
     type: "iframe",
     html: `<html>
@@ -63,49 +133,46 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/coupe4.jpg" style="  height: 675px;
+              <img src="image/coupe/Newcoupe4.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
   },
 
   {
-    url: "/video/video9.MP4",
-    type: "video",
-    with:"100%"
-  },
-  {
-    url: "/video/video2.mov",
-    type: "video",
-    with:"100%"
-  },
-
-  {
-    url: "/video/video3.MP4",
-    type: "video",
-    with:"100%"
-  },
-
-  {
-    url: "/video/video4.MP4",
-    type: "video",
-    with:"100%"
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/Newcoupe5.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
   },
 
   {
-    url: "/video/video5.MP4",
-    type: "video",
-    with:"100%"
+    type: "iframe",
+    html: `<html>
+            <body style='
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            '>
+              <img src="image/coupe/Newcoupe6.jpeg" style="  height: 675px;
+              width: 375px; object-fit: cover;" />
+            </body>
+          </html>`,
   },
-
-  {
-    url: "/video/video6.MP4",
-    type: "video",
-    with:"100%"
-  },
-  
 ];
-
 
 const isValidStory = (index: any) =>
   index >= 0 && index < stories.length ? index : 0;
