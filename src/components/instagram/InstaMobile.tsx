@@ -223,11 +223,7 @@ const stories2 = [
   // },
 
  
-  {
-    url: "/video/video13.MP4",
-    type: "video",
-    with:"100%"
-  },
+
 ];
 
 const image = {
