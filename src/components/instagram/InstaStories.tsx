@@ -15,7 +15,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe1.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe1.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -32,7 +32,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe9.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe9.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -49,7 +49,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe2.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe2.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -66,7 +66,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe8.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe8.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -99,7 +99,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe3.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe3.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -133,7 +133,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe4.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe4.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -150,7 +150,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe5.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe5.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
@@ -167,7 +167,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/Newcoupe6.jpeg" style="  height: 675px;
+              <img src="image/coupe/NewCoupe6.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
