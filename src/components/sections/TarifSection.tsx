@@ -90,7 +90,7 @@ function TarifSection({ TarifSectionRef }: any) {
                   >
                     {Array.isArray(tresse.price)
                       ? `${tresse.price[0]} / ${tresse.price[1]} CFA`
-                      : `${tresse.price} CFA`}
+                      : `${tresse.price} frs`}
                   </Heading>
                 </Flex>
               ))}
