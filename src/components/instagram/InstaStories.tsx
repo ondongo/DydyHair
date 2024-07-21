@@ -83,7 +83,7 @@ const stories = [
               justify-content: center;
               align-items: center;
             '>
-              <img src="image/coupe/coupe5.jpg" style="  height: 675px;
+              <img src="image/coupe/CoupeService2.jpeg" style="  height: 675px;
               width: 375px; object-fit: cover;" />
             </body>
           </html>`,
